@@ -1,4 +1,4 @@
-import {DEFAULT_FIELD_MAP, type FieldMap} from '../shared/normalize.ts';
+import {DEFAULT_FIELD_MAP, type FieldMap} from '../shared/normalize.js';
 
 export interface LatticeConfig {
   baseUrl: string; // e.g. http://localhost:8000/api (no trailing slash)

@@ -1,6 +1,6 @@
-import {normalizeEntry} from '../shared/normalize.ts';
-import type {ApiErrorCode, IssueCounts, MetricRecord, SkippedEntry} from '../shared/types.ts';
-import type {LatticeConfig} from './config.ts';
+import {normalizeEntry} from '../shared/normalize.js';
+import type {ApiErrorCode, IssueCounts, MetricRecord, SkippedEntry} from '../shared/types.js';
+import type {LatticeConfig} from './config.js';
 
 /** Upper bound on pages per refresh: 20 x 50 = 1000 entries, well under the 60/min per-key limit. */
 export const MAX_PAGES = 20;

@@ -1,4 +1,4 @@
-import type {MetricRecord} from './types.ts';
+import type {MetricRecord} from './types.js';
 
 /**
  * Pure transformations from normalized records to what the dashboard draws. No I/O, no React.

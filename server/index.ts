@@ -2,8 +2,8 @@ import {createReadStream, existsSync, statSync} from 'node:fs';
 import {createServer} from 'node:http';
 import {extname, join, normalize, resolve, sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {loadConfig} from './config.ts';
-import {createApiHandler} from './handler.ts';
+import {loadConfig} from './config.js';
+import {createApiHandler} from './handler.js';
 
 try {
   process.loadEnvFile(); // .env in the working directory; real env vars win

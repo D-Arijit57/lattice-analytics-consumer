@@ -1,4 +1,4 @@
-import {createApiHandler} from '../server/handler.ts';
+import {createApiHandler} from '../server/handler.js';
 
 /**
  * Vercel serverless entry for GET /api/records. Reuses the same handler as the Node server

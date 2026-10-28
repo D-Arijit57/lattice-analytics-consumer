@@ -1,4 +1,4 @@
-import type {IssueCode, MetricRecord, SkippedEntry} from './types.ts';
+import type {IssueCode, MetricRecord, SkippedEntry} from './types.js';
 
 /** Which Lattice field plays each role. Override with LATTICE_FIELD_MAP. */
 export interface FieldMap {

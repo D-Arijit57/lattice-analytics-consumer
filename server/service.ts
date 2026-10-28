@@ -1,8 +1,8 @@
-import {DEMO_CONTENT_TYPE, generateDemoData} from '../shared/demo-data.ts';
-import {normalizeEntry} from '../shared/normalize.ts';
-import type {ApiErrorBody, IssueCounts, RecordsResponse} from '../shared/types.ts';
-import type {AppConfig} from './config.ts';
-import {fetchRecords, LatticeError, type FetchedRecords} from './lattice.ts';
+import {DEMO_CONTENT_TYPE, generateDemoData} from '../shared/demo-data.js';
+import {normalizeEntry} from '../shared/normalize.js';
+import type {ApiErrorBody, IssueCounts, RecordsResponse} from '../shared/types.js';
+import type {AppConfig} from './config.js';
+import {fetchRecords, LatticeError, type FetchedRecords} from './lattice.js';
 
 export type ServiceResult = {status: number; body: RecordsResponse | ApiErrorBody};
 

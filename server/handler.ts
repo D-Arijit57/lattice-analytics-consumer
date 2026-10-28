@@ -1,5 +1,5 @@
-import {loadConfig, type AppConfig} from './config.ts';
-import {createRecordsService} from './service.ts';
+import {loadConfig, type AppConfig} from './config.js';
+import {createRecordsService} from './service.js';
 
 const HEADERS = {
   'Content-Type': 'application/json',
