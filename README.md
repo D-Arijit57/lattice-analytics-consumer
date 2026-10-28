@@ -118,5 +118,5 @@ npm run build && npm run check:bundle   # production build, then scan dist/ for 
 - Only the newest 1,000 entries are read; Lattice cannot filter entries server-side, so all aggregation happens in this app.
 - One content type at a time; no picker.
 - Charts are hand-drawn SVG (no chart library): hover/arrow-key inspection on the time series, native tooltips on bars.
-- No Vercel/serverless packaging is included; it runs as one Node process.
+- On Vercel, `api/records.ts` serves `/api/records` as a serverless function (same handler as the Node server) and the Vite build is served statically. Set `LATTICE_API_BASE_URL` and `LATTICE_API_KEY` in the project's environment variables. The 30 s cache is per function instance, so it is best-effort there. Elsewhere it runs as one Node process.
 - Hover/keyboard interaction and the 390 px phone layout were not exercised in a real interactive browser (see the verification notes in the hand-off); desktop and 500 px layouts were checked via headless screenshots.
