@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+@theme {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e6e6e1;
+  --text: #16181d;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; }
+.eyebrow { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500;
+  padding: 0.4375rem 0.875rem; border-radius: 0.5rem; border: 1px solid var(--border);
+  background: var(--surface); cursor: pointer; transition: background-color 120ms;
+}
+.btn:hover:not(:disabled) { background: #f3f3f0; }
+.btn:disabled { color: var(--muted); cursor: progress; }
+.btn:focus-visible, .chart:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-soft { 50% { opacity: 0.5; } }
+.spin { animation: spin 900ms linear infinite; }
+.skeleton { background: #ececE8; border-radius: 0.5rem; animation: pulse-soft 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .spin, .skeleton { animation: none; }
+}
